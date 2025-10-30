@@ -14,8 +14,8 @@
 				padding: 0;
 				margin: 0;
 				width: 100%;
-				height: 100%;
-				min-height: 100%;
+				height: 100dvh !important;
+				min-height: 100lvh !important;
 				background: #E4E4E4;
 			}
 
@@ -31,14 +31,19 @@
 				width: 100%;
 			}
 
-			.chat-assistant-main-wrapper {
-				height: 100dvh; /* dynamic viewport height */
-				min-height: 100lvh;
+			body .chat-assistant-main-wrapper {
+				height: 100dvh !important;
+				min-height: 100lvh !important;
 			}
 
 			@media screen and (max-width: 768px) {
-				.chat-assistant-send-message {
-					margin-bottom: 12px;
+			}
+
+			@media screen and (max-width: 640px) {
+				body .chat-assistant-root .chat-assistant-header,
+				body .chat-assistant-root .chat-assistant-workspace,
+				body .chat-assistant-root .chat-assistant-welcome-message{
+					padding: 0 18px !important;
 				}
 			}
 		</style>
