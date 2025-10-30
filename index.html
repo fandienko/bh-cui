@@ -8,6 +8,7 @@
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<link rel="apple-touch-icon" href="/icons/icon-192.png" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<style>
 			body, html {
 				padding: 0;
@@ -18,6 +19,13 @@
 				background: #E4E4E4;
 			}
 
+			body {
+				padding-top: env(safe-area-inset-top);
+				padding-bottom: env(safe-area-inset-bottom);
+				padding-left: env(safe-area-inset-left);
+				padding-right: env(safe-area-inset-right);
+			}
+
 			.betsymphony {
 				display: block;
 				width: 100%;
@@ -26,6 +34,12 @@
 			.chat-assistant-main-wrapper {
 				height: 100dvh; /* dynamic viewport height */
 				min-height: 100lvh;
+			}
+
+			@media screen and (max-width: 768px) {
+				.chat-assistant-send-message {
+					margin-bottom: 32px;
+				}
 			}
 		</style>
 
